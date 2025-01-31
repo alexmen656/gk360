@@ -34,6 +34,13 @@ I also have an unfinished project called AirlineSimulator. The files for this pr
 ## 📢 Disclaimer
 The grammar and spelling in this README.md were improved by ChatGPT.
 
+## Screenshots
+![Home View - 1](screenshots/home1.jpg)
+![Home View - 2](screenshots/home2.jpg)
+![Home View - 3](screenshots/home3.jpg)
+![Detail View - 1](screenshots/detail1.jpg)
+![Detail View - 2](screenshots/detail2.jpg)
+
 ## Project setup
 
 ```
