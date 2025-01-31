@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GemeindeKompass360">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link disabled rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://www.gk360.at">
+  <!--<link rel="preconnect" href="https://polan.sk">-->
+  <link disabled rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor%3A400" />
+  <link disabled rel="stylesheet" href="https://fonts.googleapis.com/css?family=Old+Standard+TT%3A700" />
+  <link disabled rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C600%2C700%2C800" />
+  <link disabled rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C700%2C800" />
+  <link disabled rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yrsa%3A400" />
+  <link disabled rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A400%2C700" />
+  <title>
+    GemeindeKompass360 </title>
+  <meta name="description"
+    content="Willkommen beim GemeindeKompass360 - Ihre Informationsquelle für Gemeinden im ganzem Burgenland.">
+  <link disabled media='all' rel="stylesheet" href="<%= BASE_URL %>fontawesome/css/all.min.css" />
+  <!-- integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" -->
+  <link rel="manifest" href="<%= BASE_URL %>app.webmanifest">
+  <link rel="preload" as="image" href="<%= BASE_URL %>assets/no-image.jpg">
+  <!-- <script
+    src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.core.js"
+    data-callback="initMapKit"
+    data-libraries="services,full-map,geojson"
+></script>   crossorigin async
+  crossorigin defer
+
+-->
+  <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7248911278680865"
+    crossorigin="anonymous"></script>-->
+  <script>
+    // Funktion zum Laden des Apple Maps Skripts
+    function loadAppleMapsScript(callback) {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.core.js';
+      script.setAttribute('data-libraries', 'services,full-map,annotations');//,geojson
+      script.onload = callback;
+      document.head.appendChild(script);
+    }
+
+
+    // Funktion, die aufgerufen wird, wenn das Apple Maps Skript geladen ist
+    function initializeMapKit() {
+      mapkit.init({
+        authorizationCallback: function (done) {
+          fetch('https://www.gk360.at/api/gemeinde-kompass-360/verify.php')
+            .then(res => res.text())
+            .then(done);
+        },
+        language: "de"
+      });
+    }
+
+    // Lade das Apple Maps Skript und führe dann initializeMapKit aus
+    loadAppleMapsScript(initializeMapKit);
+  </script>
+
+</head>
+
+<body>
+
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>

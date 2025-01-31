@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "type": "gemeinde",
+        "name": "Deutsch Jahrndorf",
+        "code": "deutsch-jahrndorf",
+        "oeffnungszeiten": "Mo.-Do. 07:30-16:00, Fr. 7:30-12:00",
+        "buergermeister": "Gerhard Bachmann",
+        "zuletzt_bearbeitet": "2023-08-20",
+        "adresse": "Obere Hauptstra\u00dfe 12, 2423 Deutsch Jahrndorf",
+        "telefon": "02144\/201",
+        "email": "post@deutsch-jahrndorf.bgld.gv.at"
+    },
+    {
+        "id": "2",
+        "type": "gemeinde",
+        "name": "Zurndorf",
+        "code": "zurndorf",
+        "oeffnungszeiten": "Mo - Do: 7.30 - 12.00 und 12.30 - 16.00 Fr: 7.30 - 13.00",
+        "buergermeister": "Werner Friedl",
+        "zuletzt_bearbeitet": "2023-08-20",
+        "adresse": "Untere Hauptstra\u00dfe 4, 2424 Zurndorf",
+        "telefon": "02147\/2201",
+        "email": "gemeinde@zurndorf.at, post@zurndorf.bgld.gv.at"
+    }
+]
