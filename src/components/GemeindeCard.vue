@@ -44,7 +44,7 @@ export default {
   },
   computed: {
     truncatedDescription() {
-      return this.limitToCharacters(this.gemeinde.beschreibung, 50);
+      return this.limitToCharacters(this.gemeinde.beschreibung, 60);
     },
   },
   methods: {

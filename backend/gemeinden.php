@@ -33,6 +33,7 @@ if (isset($_POST['get_gemeinden'])) {
             }
             $json['id'] = $g['id'];
             $json['name'] = $g['name'];
+            $json['beschreibung'] = $g['name'] . " ist eine Gemeinde im Bezirk " . $g['bezirk'] . " in " . $bundesland . ", Österreich. Sie hat eine Fläche von " . $g['fläche'] . " km² und " . $g['einwohnerzahl'] . " Einwohner.";            
             $json['beschreibung'] = $g['beschreibung']; //$g['name'] . " ist eine Gemeinde im Bezirk " . $g['bezirk'] . " in " . $bundesland . ", Österreich.";
             $json['code'] = $g['code'];
             $json['bilder'] = $bilder2;
@@ -100,12 +101,12 @@ if (isset($_POST['get_gemeinden'])) {
         foreach ($gemeinden as $g) {
             if (strlen($g['name']) < 13) {
                 $bezirk = $g['bezirk'];
+                $bundesland = fetch_assoc(query("SELECT * FROM gemeindekompass360_bundeslander WHERE id='{$g['bundesland']}'"))['name'] ?? "Unbekannt";
                 $json[$i]['id'] = $g['id'];
                 $json[$i]['type'] = "gemeinde";
                 $json[$i]['name'] = $g['name'];
                 $json[$i]['bild'] = pathinfo($g['bild'], PATHINFO_EXTENSION);
-                $json[$i]['beschreibung'] = $g['beschreibung'];//$g['name'] . " ist eine Gemeinde im Bezirk " . $g['bezirk'] . " in " . $bundesland . ", Österreich.";
-                //."Deutsch Jahrndorf - blablalldakf"
+                $json[$i]['beschreibung'] = $g['name'] . " ist eine Gemeinde im Bezirk " . $g['bezirk'] . " in " . $bundesland . ", Österreich. Sie hat eine Fläche von " . $g['fläche'] . " km² und " . $g['einwohnerzahl'] . " Einwohner.";                //."Deutsch Jahrndorf - blablalldakf"//$g['beschreibung'];
                 $json[$i]['code'] = $g['code'];
                 $json[$i]['oeffnungszeiten'] = $g['öffnungszeiten'];
                 $json[$i]['buergermeister'] = $g['bürgermeister'];

@@ -24,46 +24,54 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Bundesländer
+              {{ $t("federal_states.federal_states") }}
             </a>
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" href="/bundesland/burgenland"
-                  >Burgenland</a
-                >
+                <a class="dropdown-item" href="/bundesland/burgenland">{{
+                  $t("federal_states.burgenland")
+                }}</a>
               </li>
               <li>
-                <a class="dropdown-item" href="/bundesland/kärnten">Kärnten</a>
+                <a class="dropdown-item" href="/bundesland/kärnten">{{
+                  $t("federal_states.carinthia")
+                }}</a>
               </li>
               <li>
-                <a class="dropdown-item" href="/bundesland/niederösterreich"
-                  >Niederösterreich</a
-                >
+                <a class="dropdown-item" href="/bundesland/niederösterreich">{{
+                  $t("federal_states.lower_austria")
+                }}</a>
               </li>
               <li>
-                <a class="dropdown-item" href="/bundesland/oberösterreich"
-                  >Oberösterreich</a
-                >
+                <a class="dropdown-item" href="/bundesland/oberösterreich">{{
+                  $t("federal_states.upper_austria")
+                }}</a>
               </li>
               <li>
-                <a class="dropdown-item" href="/bundesland/salzburg"
-                  >Salzburg</a
-                >
+                <a class="dropdown-item" href="/bundesland/salzburg">{{
+                  $t("federal_states.salzburg")
+                }}</a>
               </li>
               <li>
-                <a class="dropdown-item" href="/bundesland/steiermark"
-                  >Steiermark</a
-                >
+                <a class="dropdown-item" href="/bundesland/steiermark">{{
+                  $t("federal_states.styria")
+                }}</a>
               </li>
               <li>
-                <a class="dropdown-item" href="/bundesland/tirol">Tirol</a>
+                <a class="dropdown-item" href="/bundesland/tirol">{{
+                  $t("federal_states.tyrol")
+                }}</a>
               </li>
               <li>
-                <a class="dropdown-item" href="/bundesland/vorarlberg"
-                  >Vorarlberg</a
-                >
+                <a class="dropdown-item" href="/bundesland/vorarlberg">{{
+                  $t("federal_states.vorarlberg")
+                }}</a>
               </li>
-              <li><a class="dropdown-item" href="/bundesland/wien">Wien</a></li>
+              <li>
+                <a class="dropdown-item" href="/bundesland/wien">{{
+                  $t("federal_states.vienna")
+                }}</a>
+              </li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -74,11 +82,25 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              DE
+              {{ currentLanguage }}
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">DE</a></li>
-              <li><a class="dropdown-item" href="#">EN</a></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  @click.prevent="changeLanguage('de')"
+                  >DE</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  @click.prevent="changeLanguage('en')"
+                  >EN</a
+                >
+              </li>
             </ul>
           </li>
           <!--<li class="nav-item">
@@ -99,7 +121,23 @@
   </nav>
 </template>
 <script>
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
 export default {
+  setup() {
+    const { locale } = useI18n();
+    const currentLanguage = computed(() => locale.value.toUpperCase());
+
+    const changeLanguage = (lang) => {
+      locale.value = lang;
+    };
+
+    return {
+      currentLanguage,
+      changeLanguage,
+    };
+  },
   data() {
     return {
       keyword: "",
