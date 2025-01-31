@@ -68,12 +68,7 @@
 
                 
               </div>
-              <div class="col-12">
-              <div
-              class="card d-flex justify-content-center flex-column align-items-center"
-              style="height: 100%"
-            ></div>
-          </div>
+          
 
             </div>
           </div>

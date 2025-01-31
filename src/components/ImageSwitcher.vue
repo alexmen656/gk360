@@ -54,6 +54,7 @@ img:not(.image-preview) {
   border-radius: 18px;
   overflow: hidden;
   object-fit: cover;
+  width: 100%;
 }
 
 .image-previews {

@@ -70,5 +70,4 @@ export default {
 .carousel-attribution > span {
   font-size: .75rem;
 }
-
 </style>
