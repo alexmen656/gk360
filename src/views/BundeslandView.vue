@@ -42,3 +42,9 @@ export default {
   },
 };
 </script>
+<style scoped>
+h1 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+</style>

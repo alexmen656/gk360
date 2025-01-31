@@ -33,9 +33,9 @@
                         .replace('ä', 'ae') +
                       '.jpg'
                     "
-                    alt="Wappen von {{ bundesland.name }}"
+                    alt="Wappen von {{ bundesland.tname }}"
                   />
-                  {{ bundesland.name }}
+                  {{ bundesland.tname }}
                 </h5>
                 <i class="fa-solid fa-chevron-right"></i>
               </div>
@@ -51,8 +51,8 @@
       </div>
       <div class="container-fluid" v-if="loaded2">
         <h2 class="mb-4">
-          Entdecke Gemeinden im ganzen
-          <span style="color: #f1c40f">Österreich</span>
+          {{ $t("heading2") }}
+          <span style="color: #f1c40f"> {{ $t("austria") }} </span>
         </h2>
         <div
           class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4"
@@ -117,38 +117,47 @@ export default {
         {
           //  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Burgenland_Wappen.svg/1200px-Burgenland_Wappen.svg.png",
           name: "Burgenland",
+          tname: this.$t("federal_states.burgenland"),
         },
         {
           //"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Wien_Wappen.svg/1200px-Wien_Wappen.svg.png",
           name: "Wien",
+          tname: this.$t("federal_states.vienna"),
         },
         {
           //"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Nieder%C3%B6sterreich_CoA.svg/1200px-Nieder%C3%B6sterreich_CoA.svg.png",
           name: "Niederösterreich",
+          tname: this.$t("federal_states.lower_austria"),
         },
         {
           //"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Oberoesterreich_Wappen.svg/1200px-Oberoesterreich_Wappen.svg.png",
           name: "Oberösterreich",
+          tname: this.$t("federal_states.upper_austria"),
         },
         {
           //"https://upload.wikimedia.org/wikipedia/commons/3/35/Steiermark_Wappen.svg",
           name: "Steiermark",
+          tname: this.$t("federal_states.styria"),
         },
         {
           //"https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Burgenland_Wappen.svg/1200px-Burgenland_Wappen.svg.png",
           name: "Kärnten",
+          tname: this.$t("federal_states.carinthia"),
         },
         {
           //"https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Burgenland_Wappen.svg/1200px-Burgenland_Wappen.svg.png",
           name: "Salzburg",
+          tname: this.$t("federal_states.salzburg"),
         },
         {
           // "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Burgenland_Wappen.svg/1200px-Burgenland_Wappen.svg.png",
           name: "Tirol",
+          tname: this.$t("federal_states.tyrol"),
         },
         {
           //"https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Burgenland_Wappen.svg/1200px-Burgenland_Wappen.svg.png",
           name: "Vorarlberg",
+          tname: this.$t("federal_states.vorarlberg"),
         },
       ],
     };

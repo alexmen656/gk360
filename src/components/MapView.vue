@@ -18,7 +18,6 @@ export default {
     map._impl.zoomLevel--;
 
         
-        // Setting properties after creation:
         var workAnnotation = new MarkerAnnotation(work);
         //workAnnotation.color = "#969696"; 
         workAnnotation.title = "Gemeinde";
@@ -26,7 +25,6 @@ export default {
         workAnnotation.selected = "true";
         //workAnnotation.glyphText = "📍";
         
-        // Add and show both annotations on the map
         map.showItems([workAnnotation]);
       
 
@@ -38,7 +36,7 @@ export default {
 <style>
 .map-container {
   border-radius: 18px;
-  overflow: hidden; /* Stelle sicher, dass der Inhalt innerhalb des Containers abgeschnitten wird */
+  overflow: hidden;
 }
 
 #map {

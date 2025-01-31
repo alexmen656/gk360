@@ -25,7 +25,7 @@
         </div>
       </div>
   
-      <div class="card custom-card card3 text-center">Wien - Österreich</div>
+      <div class="card custom-card card3 text-center">{{$t('federal_states.vienna')}} - {{$t('austria')}}</div>
     </div>
   </template>
   

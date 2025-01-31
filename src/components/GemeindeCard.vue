@@ -3,28 +3,38 @@
     <div class="card custom-card">
       <div class="aspect-ratio-wrapper">
         <img
-          v-lazy="'https://alex.polan.sk/api/gemeinde-kompass-360/thumbnails/'+(gemeinde.bild ? gemeinde.code+'_thumb1.'+gemeinde.bild : 'no-image.jpg')"
+          v-lazy="
+            'https://alex.polan.sk/api/gemeinde-kompass-360/thumbnails/' +
+            (gemeinde.bild
+              ? gemeinde.code + '_thumb1.' + gemeinde.bild
+              : 'no-image.jpg')
+          "
           :alt="'Bild der Gemeinde ' + gemeinde.name"
           class="card-img-top aspect-ratio-item"
         />
       </div>
       <div class="card-body">
-        <div class="name-date d-flex justify-content-between align-items-center">
+        <div
+          class="name-date d-flex justify-content-between align-items-center"
+        >
           <div class="name">{{ gemeinde.name }}</div>
-          <small class="text-body-secondary d-flex align-middle">{{ new Date(gemeinde.zuletzt_bearbeitet).toLocaleDateString("de-AT") }}</small>
+          <small class="text-body-secondary d-flex align-middle">{{
+            new Date(gemeinde.zuletzt_bearbeitet).toLocaleDateString("de-AT")
+          }}</small>
         </div>
         <div class="description">{{ truncatedDescription }}</div>
         <div class="btn-group mt-2">
-          <router-link :to="'/gemeinde/' + gemeinde.code" class="btn custom-btn">
-            Mehr Erfahren
+          <router-link
+            :to="'/gemeinde/' + gemeinde.code"
+            class="btn custom-btn"
+          >
+            {{ $t("get_more_info") }}
           </router-link>
         </div>
       </div>
     </div>
   </div>
 </template>
-
-
 
 <script>
 export default {
@@ -39,20 +49,18 @@ export default {
   },
   methods: {
     limitToCharacters(text, charLimit) {
-      if(text){
+      if (text) {
         if (text.length <= charLimit) {
-        return text;
-      } else {
-        const lastSpaceIndex = text.lastIndexOf(' ', charLimit);
-        return text.slice(0, lastSpaceIndex) + '...';
+          return text;
+        } else {
+          const lastSpaceIndex = text.lastIndexOf(" ", charLimit);
+          return text.slice(0, lastSpaceIndex) + "...";
+        }
       }
-      }
-   
     },
   },
 };
 </script>
-
 
 <style scoped>
 .aspect-ratio-wrapper {
@@ -86,13 +94,13 @@ export default {
   line-height: 1.3999999762;
   letter-spacing: 0.05rem;
   color: #333333;
-  font-family: Lato, 'Source Sans Pro';
+  font-family: Lato, "Source Sans Pro";
 }
 
-.custom-card { 
+.custom-card {
   padding: 0.8rem 0.8rem 0.6rem 0.8rem;
   border-radius: 18px;
-  box-shadow: 0 5px 10px #D4D4D4;
+  box-shadow: 0 5px 10px #d4d4d4;
   border: none;
   background: rgba(255, 250, 250, 0.45);
 }

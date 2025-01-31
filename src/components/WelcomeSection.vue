@@ -2,11 +2,10 @@
   <div class="row">
     <div class="col-md-6 col-12 pt-100">
       <h1 class="welcome text-center text-sm-start">
-        Willkommen beim GemeindeKompass360
+        {{$t('title')}}
       </h1>
       <p class="welcome-text text-center text-sm-start">
-        Entdecke die Gemeinden in Burgenland und erhalte wichtige Informationen
-        über Standorte, Gemeindeämter und Öffnungszeiten.
+        {{$t('description')}}
       </p>
     </div>
     <div class="col-md-6 col-0 d-none d-md-block">
