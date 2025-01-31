@@ -1,6 +1,5 @@
-# GK360 website - gemeindekompass360
-
-Gemeindekompass360 (translated as "Municipality Compass 360") is a website that provides detailed information about every municipality in Austria. The site includes images and facts about each municipality, such as:
+# GK360 (GemeindeKompass360) website - Get to Know Everything About Austria
+GemeindeKompass360 (translated as "Municipality Compass 360") is a website that provides detailed information about every municipality in Austria. The site includes images and facts about each municipality, such as:
 
 - Mayor
 - District
