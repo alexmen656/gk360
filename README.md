@@ -9,7 +9,7 @@ Gemeindekompass360 (translated as "Municipality Compass 360") is a website that 
 - Area
 - Postal code
 
-This is the final project from my GK360 project series. This is the web version. Unfortunately, there are some bugs and errors, but I had no time to finish it completely. So I am shipping it in its current state.
+This is the final project from my GK360 project series. This is the web version.
 
 Demo: [https://gk360.alex.polan.sk/](https://gk360.alex.polan.sk/)
 
