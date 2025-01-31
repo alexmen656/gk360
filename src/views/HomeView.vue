@@ -26,7 +26,7 @@
                   <img
                     class="wappen me-2"
                     :src="
-                      'https://www.gk360.at/api/gemeinde-kompass-360/bundeslaender/wappen/' +
+                      'https://alex.polan.sk/api/gemeinde-kompass-360/bundeslaender/wappen/' +
                       bundesland.name
                         .toLowerCase()
                         .replace('ö', 'oe')
@@ -76,7 +76,7 @@
 <script>
 /*mapkit.init({
     authorizationCallback: function(done) {
-        fetch("https://www.gk360.at/api/gemeinde-kompass-360/verify.php")
+        fetch("https://alex.polan.sk/api/gemeinde-kompass-360/verify.php")
             .then(res => res.text())
             .then(done);
     },

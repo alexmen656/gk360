@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link disabled rel="icon" href="<%= BASE_URL %>favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://www.gk360.at">
+  <link rel="preconnect" href="https://alex.polan.sk">
   <!--<link rel="preconnect" href="https://polan.sk">-->
   <link disabled rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor%3A400" />
   <link disabled rel="stylesheet" href="https://fonts.googleapis.com/css?family=Old+Standard+TT%3A700" />
@@ -53,7 +53,7 @@
     function initializeMapKit() {
       mapkit.init({
         authorizationCallback: function (done) {
-          fetch('https://www.gk360.at/api/gemeinde-kompass-360/verify.php')
+          fetch('https://alex.polan.sk/api/gemeinde-kompass-360/verify.php')
             .then(res => res.text())
             .then(done);
         },

@@ -35,8 +35,8 @@
     data() {
       return {
         imageUrls: [
-          'https://www.gk360.at/api/gemeinde-kompass-360/thumbnails/hallstatt_thumb1.jpg',
-          'https://www.gk360.at/api/gemeinde-kompass-360/thumbnails/no-image.jpg'
+          'https://alex.polan.sk/api/gemeinde-kompass-360/thumbnails/hallstatt_thumb1.jpg',
+          'https://alex.polan.sk/api/gemeinde-kompass-360/thumbnails/no-image.jpg'
         ],
         altTexts: [
           'Bild der Gemeinde Coolerdorf'

@@ -3,7 +3,7 @@
     <div class="card custom-card">
       <div class="aspect-ratio-wrapper">
         <img
-          v-lazy="'https://www.gk360.at/api/gemeinde-kompass-360/thumbnails/'+(gemeinde.bild ? gemeinde.code+'_thumb1.'+gemeinde.bild : 'no-image.jpg')"
+          v-lazy="'https://alex.polan.sk/api/gemeinde-kompass-360/thumbnails/'+(gemeinde.bild ? gemeinde.code+'_thumb1.'+gemeinde.bild : 'no-image.jpg')"
           :alt="'Bild der Gemeinde ' + gemeinde.name"
           class="card-img-top aspect-ratio-item"
         />

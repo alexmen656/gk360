@@ -15,7 +15,7 @@ import i18n from "./i18n";
 import qs from "qs";
 
 library.add(faUserGroup);
-axios.defaults.baseURL = "https://www.gk360.at/api/gemeinde-kompass-360/";
+axios.defaults.baseURL = "https://alex.polan.sk/api/gemeinde-kompass-360/";
 
 const loadimage = require("./assets/no-image.jpg");
 const errorimage = require("./assets/no-image.jpg");

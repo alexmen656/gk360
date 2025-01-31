@@ -30,7 +30,7 @@ export default {
   created() {
     this.$axios
       .post(
-        "https://www.gk360.at/api/gemeinde-kompass-360/gemeinden.php",
+        "https://alex.polan.sk/api/gemeinde-kompass-360/gemeinden.php",
         this.$qs.stringify({
           get_gemeinden: "get_gemeinden",
           bezirk: this.$route.params.bezirkName,
